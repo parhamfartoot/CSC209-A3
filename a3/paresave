@@ -1,0 +1,103 @@
+/*
+bool search(struct rule_node *head, struct rule_node rule)
+{
+    struct rule_node *current = head;  // Initialize current
+
+    //printf("%s\n",current->target);
+
+    while (current->next_rule) {
+        //printf("%s\n",current->next_rule->target);
+        if (current == &rule){
+            return true;
+        }
+        current = current->next_rule;
+    }
+
+    return false;
+}
+
+void add_rule(Rule *rule, Rule *add )
+{
+    struct rule_node  *temp;
+        temp = rule;
+        if (temp->target == NULL){
+            temp->target = add->target;
+        }
+        else {
+
+            // Traverse to the last node
+            while (temp->next_rule != NULL)
+                temp = temp->next_rule;
+
+            temp->next_rule = add; // Link address part
+        }
+
+    struct rule_node *current = head;
+    //printf("%s\n",current->target);
+
+    if (current != NULL){
+        while (current->next_rule) {
+            //printf("%s\n", current->next_rule->target);
+            current = current->next_rule;
+            //
+        }
+        current->next_rule = &add;
+    } else{
+        *current = add;
+    }
+
+}
+void addruleEnd(Rule *rule,char *target)
+{
+    struct rule_node *newNode, *temp;
+
+    newNode = (struct rule_node*)malloc(sizeof(struct rule_node));
+
+    if(newNode == NULL)
+    {
+        printf("Unable to allocate memory.");
+    }
+    else
+    {
+        newNode->target = target; // Link the data part
+        newNode->next_rule = NULL;
+
+        temp = rule;
+
+        // Traverse to the last node
+        while(temp->next_rule != NULL)
+            temp = temp->next_rule;
+
+        temp->next_rule = newNode; // Link address part
+    }
+}
+void add_dep_rule(struct dep_node *head, struct rule_node rule ) {
+    struct dep_node *current = head;
+    struct dep_node new = *(struct dep_node*) malloc(sizeof(struct dep_node));
+    rule.next_rule = NULL;
+    new.rule = &rule;
+    new.next_dep = NULL;
+
+    if (current->rule != NULL) {
+
+    while (current->next_dep) {
+        current = current->next_dep;
+    }
+    current->next_dep = &new;
+    }
+
+}
+
+void add_dep(struct dep_node *head, Dependency *dep )
+{
+    struct dep_node *current = head;
+    dep->next_dep = NULL;
+    if (current->rule != NULL) {
+
+        while (current->next_dep) {
+            current = current->next_dep;
+        }
+        current->next_dep = dep;
+    }
+}
+/*

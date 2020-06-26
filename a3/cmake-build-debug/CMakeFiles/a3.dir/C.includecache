@@ -1,0 +1,78 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/helpers.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/parse.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+sys/stat.h
+-
+ctype.h
+-
+pmake.h
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/pmake.h
+
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/pmake.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+sys/stat.h
+-
+pmake.h
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/pmake.h
+
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/pmake.h
+stdbool.h
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/stdbool.h
+
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/run_make.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+sys/stat.h
+-
+time.h
+-
+pmake.h
+/Users/ph/Desktop/UofT/Year 3/CSC209/fartootp/a3/pmake.h
+
